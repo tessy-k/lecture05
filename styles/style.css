@@ -86,6 +86,7 @@ h1{
     display: flex;
     justify-content: center;
 }
+
 #routine div{
     border: #f68c9f solid 1px;
     padding: 2%;
@@ -93,21 +94,20 @@ h1{
     font-size: small;
     min-width: 30%;
 }
-
 #routine h2{
     text-align: center;
     color: #d64c6c;
+}
+#morning:hover{
+    opacity:1;
+    background: rgba(255, 255, 255, 0.5);
 }
 #morning{
     background-image: url(images/doki_morning.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    opacity: 0.5; /* Adjusts the transparency: 0 is fully transparent, 1 is fully opaque */
-}
-#morning:hover{
-    opacity:1;
-    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
 }
 #midday{
     background-image: url(images/doki-midday.jpg);
@@ -131,12 +131,16 @@ h1{
     background-image: url(images/doki_evening.jpg);
     opacity: 0.5; /* Adjusts the transparency: 0 is fully transparent, 1 is fully opaque */
 }
-
 #evening:hover{
     opacity:1;
     background: rgba(255, 255, 255, 0.5);
 }
-
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
 #doki img{
     width: 100%;
 
