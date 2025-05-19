@@ -40,9 +40,23 @@
         </nav>
     </section>
     <section id="main">
-    <h1>A Day in the Life of <a href=#doki_pic> Doki (THE CAT)</a></h1>
+        <?php
+        $catName="Doki";
+        echo "<h1>A Day in the Life of <a href=#doki_pic> $catName (THE CAT)</a></h1>";
+        ?>
     <p>Welcome to the purrfectly amusing world of feline antics!</p>
     
+    <?php
+        $activities = array("Waking up", "ignoring breakfast", "Zoomies", "Annoying the dog", "Knocking over vase");
+        echo "<h3>$catName's Top 3 Favourite Activities:</h3>";
+
+        for($i = 0;$i < 3; $i++){
+            echo "<p> Avtivity ". ($i+1).": $activities[$i] </p>";
+        }
+        if(in_array("Zoomies", $activities)){
+            echo "<p> Of course, $catName laves Zoomies!</p>";
+        }
+    ?>
     <section id="routine">
         <div id="morning" class="routine_text">
             <h2>Morning Routine</h2>
